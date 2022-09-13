@@ -1619,6 +1619,9 @@ function sb_Crypto__init_0($this) {
 function sb_Crypto_createBlake2bDigest($this, $size) {
     return obcd_Blake2bDigest__init_($size);
 }
+function sb_Crypto_create_GF_192($this, $that) {
+    return g_GF2_192__init_5($that);
+}
 function sb_Crypto_fromByteArray($this, $coeff0, $moreCoeffs) {
     return g_GF2_192_Poly_fromByteArray($coeff0, $moreCoeffs);
 }
@@ -1631,7 +1634,10 @@ function sb_Crypto_fromByteArray$exported$0(var$0, var$1, var$2) {
 function sb_Crypto_interpolate$exported$1(var$0, var$1, var$2, var$3) {
     return var$0.$interpolate0(otji_JS_unwrapByteArray(var$1), otji_JS_unwrapArray($rt_cls(g_GF2_192_Base), var$2), var$3);
 }
-function sb_Crypto_createBlake2bDigest$exported$2(var$0, var$1) {
+function sb_Crypto_create_GF_192$exported$2(var$0, var$1) {
+    return var$0.$create_GF_192(otji_JS_unwrapByteArray(var$1));
+}
+function sb_Crypto_createBlake2bDigest$exported$3(var$0, var$1) {
     return var$0.$createBlake2bDigest(var$1);
 }
 var otci_IntegerUtil = $rt_classWithoutFields();
@@ -2232,10 +2238,11 @@ jl_IncompatibleClassChangeError, 0, jl_LinkageError, [], 0, 3, 0, 0, ["$_init_0"
 jl_NoSuchFieldError, 0, jl_IncompatibleClassChangeError, [], 0, 3, 0, 0, ["$_init_0", $rt_wrapFunction1(jl_NoSuchFieldError__init_0)],
 otj_JSObject, 0, jl_Object, [], 3, 3, 0, 0, 0,
 g_GF2_192_Base, 0, jl_Object, [otj_JSObject], 1, 3, 0, 0, 0,
-g_GF2_192, 0, g_GF2_192_Base, [], 0, 3, 0, g_GF2_192_$callClinit, ["$_init_", $rt_wrapFunction0(g_GF2_192__init_0), "$_init_2", $rt_wrapFunction1(g_GF2_192__init_2), "$_init_3", $rt_wrapFunction1(g_GF2_192__init_4), "$_init_6", $rt_wrapFunction1(g_GF2_192__init_6), "$_init_1", $rt_wrapFunction2(g_GF2_192__init_8)],
+g_GF2_192, 0, g_GF2_192_Base, [], 0, 3, 0, g_GF2_192_$callClinit, ["$_init_", $rt_wrapFunction0(g_GF2_192__init_0), "$_init_2", $rt_wrapFunction1(g_GF2_192__init_2), "$_init_3", $rt_wrapFunction1(g_GF2_192__init_4), "$_init_4", $rt_wrapFunction1(g_GF2_192__init_6), "$_init_1", $rt_wrapFunction2(g_GF2_192__init_8)],
 jl_Character, 0, jl_Object, [jl_Comparable], 0, 3, 0, jl_Character_$callClinit, 0,
 sb_Exported, 0, jl_Object, [otj_JSObject], 3, 0, 0, 0, 0,
-sb_Crypto, 0, jl_Object, [sb_Exported], 0, 3, 0, 0, ["$_init_", $rt_wrapFunction0(sb_Crypto__init_0), "$createBlake2bDigest", $rt_wrapFunction1(sb_Crypto_createBlake2bDigest), "$fromByteArray", $rt_wrapFunction2(sb_Crypto_fromByteArray), "$interpolate0", $rt_wrapFunction3(sb_Crypto_interpolate), "$fromByteArray$exported$0", $rt_wrapFunction2(sb_Crypto_fromByteArray$exported$0), "$interpolate$exported$1", $rt_wrapFunction3(sb_Crypto_interpolate$exported$1), "$createBlake2bDigest$exported$2", $rt_wrapFunction1(sb_Crypto_createBlake2bDigest$exported$2)],
+sb_Crypto, 0, jl_Object, [sb_Exported], 0, 3, 0, 0, ["$_init_", $rt_wrapFunction0(sb_Crypto__init_0), "$createBlake2bDigest", $rt_wrapFunction1(sb_Crypto_createBlake2bDigest), "$create_GF_192", $rt_wrapFunction1(sb_Crypto_create_GF_192), "$fromByteArray", $rt_wrapFunction2(sb_Crypto_fromByteArray), "$interpolate0", $rt_wrapFunction3(sb_Crypto_interpolate), "$fromByteArray$exported$0", $rt_wrapFunction2(sb_Crypto_fromByteArray$exported$0), "$interpolate$exported$1", $rt_wrapFunction3(sb_Crypto_interpolate$exported$1),
+"$create_GF_192$exported$2", $rt_wrapFunction1(sb_Crypto_create_GF_192$exported$2), "$createBlake2bDigest$exported$3", $rt_wrapFunction1(sb_Crypto_createBlake2bDigest$exported$3)],
 otci_IntegerUtil, 0, jl_Object, [], 4, 3, 0, 0, 0,
 jl_Math, 0, jl_Object, [], 4, 3, 0, 0, 0,
 otjc_JSNumber, 0, jl_Object, [otj_JSObject], 1, 3, 0, 0, 0,
@@ -2254,7 +2261,7 @@ sb_Main, 0, jl_Object, [], 0, 3, 0, 0, 0,
 obc_ExtendedDigest, 0, jl_Object, [obc_Digest], 3, 3, 0, 0, 0,
 obcd_Blake2bDigest, 0, jl_Object, [obc_ExtendedDigest], 0, 3, 0, obcd_Blake2bDigest_$callClinit, ["$_init_3", $rt_wrapFunction1(obcd_Blake2bDigest__init_0)],
 otp_Platform, 0, jl_Object, [], 4, 3, 0, 0, 0,
-jl_String, 0, jl_Object, [ji_Serializable, jl_Comparable, jl_CharSequence], 0, 3, 0, jl_String_$callClinit, ["$_init_4", $rt_wrapFunction1(jl_String__init_1), "$_init_5", $rt_wrapFunction3(jl_String__init_2), "$charAt", $rt_wrapFunction1(jl_String_charAt), "$length0", $rt_wrapFunction0(jl_String_length), "$isEmpty", $rt_wrapFunction0(jl_String_isEmpty), "$equals", $rt_wrapFunction1(jl_String_equals), "$hashCode0", $rt_wrapFunction0(jl_String_hashCode)],
+jl_String, 0, jl_Object, [ji_Serializable, jl_Comparable, jl_CharSequence], 0, 3, 0, jl_String_$callClinit, ["$_init_5", $rt_wrapFunction1(jl_String__init_1), "$_init_6", $rt_wrapFunction3(jl_String__init_2), "$charAt", $rt_wrapFunction1(jl_String_charAt), "$length0", $rt_wrapFunction0(jl_String_length), "$isEmpty", $rt_wrapFunction0(jl_String_isEmpty), "$equals", $rt_wrapFunction1(jl_String_equals), "$hashCode0", $rt_wrapFunction0(jl_String_hashCode)],
 obu_Pack, 0, jl_Object, [], 1, 3, 0, 0, 0,
 jl_NoClassDefFoundError, 0, jl_LinkageError, [], 0, 3, 0, 0, 0,
 jl_NegativeArraySizeException, 0, jl_RuntimeException, [], 0, 3, 0, 0, ["$_init_", $rt_wrapFunction0(jl_NegativeArraySizeException__init_0)],
@@ -2945,7 +2952,8 @@ main.javaException = $rt_javaException;
     c = sb_Crypto.prototype;
     c.interpolate = c.$interpolate$exported$1;
     c.fromByteArray = c.$fromByteArray$exported$0;
-    c.createBlake2bDigest = c.$createBlake2bDigest$exported$2;
+    c.create_GF_192 = c.$create_GF_192$exported$2;
+    c.createBlake2bDigest = c.$createBlake2bDigest$exported$3;
 })();
 })();
 

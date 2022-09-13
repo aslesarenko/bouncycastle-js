@@ -12,6 +12,11 @@ public class Crypto implements Exported {
     }
 
     @Override
+    public GF2_192_Base create_GF_192(byte[] that) {
+        return new GF2_192(that);
+    }
+
+    @Override
     public GF2_192_Poly fromByteArray(byte[] coeff0, byte[] moreCoeffs) {
         return GF2_192_Poly.fromByteArray(coeff0, moreCoeffs);
     }

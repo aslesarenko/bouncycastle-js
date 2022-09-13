@@ -27,28 +27,30 @@ package gf2t;/*
  For more information, please refer to <http://unlicense.org>
  */
 
+import java.util.Arrays;
+
 public class GF2_192 extends GF2_192_Base {
     private final long [] word = new long[3];
 
-//    /**
-//     *
-//     * @param obj the field element with which to compare
-//     * @return true if and only if this and that represent the same field element
-//     */
-//    @Override
-//    public boolean equals(Object obj) {
-//        if (this == obj) return true; // equal references
-//        if (obj instanceof GF2_192) {
-//            GF2_192 that = (GF2_192)obj;
-//            return this.word[0]==that.word[0] && this.word[1]==that.word[1] && this.word[2]==that.word[2];
-//        }
-//        return false; // different types
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Arrays.hashCode(word);
-//    }
+    /**
+     *
+     * @param obj the field element with which to compare
+     * @return true if and only if this and that represent the same field element
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true; // equal references
+        if (obj instanceof GF2_192) {
+            GF2_192 that = (GF2_192)obj;
+            return this.word[0]==that.word[0] && this.word[1]==that.word[1] && this.word[2]==that.word[2];
+        }
+        return false; // different types
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(word);
+    }
 
     // using irreducible polynomial x^192+x^7+x^2+x+1
     // We need only the last word
