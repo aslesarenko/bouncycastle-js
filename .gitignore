@@ -14,3 +14,4 @@ target
 
 # nodejs
 node_modules
+.npmrc
