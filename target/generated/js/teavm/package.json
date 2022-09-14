@@ -1,0 +1,18 @@
+{
+  "name": "bouncycastle-js",
+  "version": "0.1.3",
+  "description": "A library of selected methods from BouncyCastle cross-compiled to JavaScript with TeaVM",
+  "main": "classes.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aslesarenko/bouncycastle-js.git"
+  },
+  "author": "aslesarenko",
+  "bugs": {
+    "url": "https://github.com/aslesarenko/bouncycastle-js/issues"
+  },
+  "homepage": "https://github.com/aslesarenko/bouncycastle-js#readme"
+}
