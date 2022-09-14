@@ -2945,7 +2945,7 @@ function $rt_nativeThread() {
 }
 function $rt_invalidPointer() {
 }
-main = $rt_mainStarter(sb_Main_main);
+main = sb_Crypto__init_();
 main.javaException = $rt_javaException;
 (function() {
     var c;
@@ -2957,4 +2957,5 @@ main.javaException = $rt_javaException;
 })();
 })();
 
+module.exports = main;
 //# sourceMappingURL=classes.js.map
