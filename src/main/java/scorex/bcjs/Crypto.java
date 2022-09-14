@@ -6,9 +6,10 @@ import gf2t.GF2_192_Poly;
 import org.bouncycastle.crypto.digests.Blake2bDigest;
 
 public class Crypto implements Exported {
+
     @Override
-    public Blake2bDigest createBlake2bDigest(int size) {
-        return new Blake2bDigest(size);
+    public Blake2bDigestImpl createBlake2bDigest(int size) {
+        return new Blake2bDigestImpl(new Blake2bDigest(size));
     }
 
     @Override
