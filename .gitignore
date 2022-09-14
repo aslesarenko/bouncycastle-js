@@ -11,3 +11,7 @@ target
 
 # logs
 *.log
+
+# nodejs
+node_modules
+.npmrc
