@@ -3297,6 +3297,8 @@ function $rt_nativeThread() {
 function $rt_invalidPointer() {
 }
 main = sb_Crypto__init_();
+main.$rt_createByteArrayFromData = $rt_createByteArrayFromData;
+main.$rt_createByteArray = $rt_createByteArray
 main.javaException = $rt_javaException;
 (function() {
     var c;
